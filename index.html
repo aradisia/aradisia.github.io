@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红帽官网-童话IP形象与儿童成长故事平台</title>
+    <meta name="description" content="小红帽官网是围绕经典童话IP打造的儿童成长内容平台，汇集小红帽故事、亲子阅读、益智游戏、动画周边及安全教育资源，陪伴孩子快乐成长。">
+    <meta name="keywords" content="小红帽官网,小红帽故事,小红帽动画,儿童童话,亲子阅读,益智游戏,安全教育,小红帽周边">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fdf8f2;
+            color: #4a3b32;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* ===== Header ===== */
+        .site-header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            padding: 12px 0;
+            box-shadow: 0 2px 12px rgba(238, 90, 36, 0.25);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .brand-name {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav a {
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: all .3s;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            border-bottom-color: #fff;
+            opacity: 0.9;
+        }
+        /* ===== Hero 首屏 ===== */
+        .hero {
+            background: linear-gradient(180deg, #ffe3d0, #ffd0b5);
+            padding: 60px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "🍄";
+            position: absolute;
+            left: 5%;
+            top: 20px;
+            font-size: 60px;
+            opacity: 0.4;
+            animation: float 4s ease-in-out infinite;
+        }
+        .hero::after {
+            content: "🌲";
+            position: absolute;
+            right: 7%;
+            bottom: 20px;
+            font-size: 70px;
+            opacity: 0.3;
+            animation: float 5s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #c0392b;
+            margin-bottom: 12px;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.6);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #6e4b3a;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all .3s;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #e74c3c;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(231, 76, 60, 0.35);
+        }
+        .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #c0392b;
+            border: 2px solid #c0392b;
+        }
+        .btn-outline:hover {
+            background: #c0392b;
+            color: #fff;
+        }
+        /* ===== 栏目通用 ===== */
+        .section {
+            padding: 60px 0;
+        }
+        .section-alt {
+            background: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #b03a2e;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 12px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #ffb347;
+            border-radius: 4px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #7f6b5f;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        /* ===== 故事分类卡片 ===== */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .story-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: all .35s;
+            border: 2px solid transparent;
+        }
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+            border-color: #ffb347;
+        }
+        .story-icon {
+            font-size: 3rem;
+            margin-bottom: 14px;
+        }
+        .story-card h3 {
+            color: #b03a2e;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .story-card p {
+            color: #7f6b5f;
+            font-size: 0.95rem;
+        }
+        /* ===== 热门故事列表 ===== */
+        .featured-wrap {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .featured-main {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border-left: 6px solid #e74c3c;
+        }
+        .featured-main h3 {
+            font-size: 1.6rem;
+            color: #b03a2e;
+            margin-bottom: 10px;
+        }
+        .featured-main p {
+            color: #5f4b3e;
+            margin-bottom: 15px;
+        }
+        .featured-list {
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+        .featured-list h3 {
+            font-size: 1.3rem;
+            color: #b03a2e;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed #f0d5c0;
+            padding-bottom: 10px;
+        }
+        .featured-list ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f5e6da;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+            transition: all .2s;
+        }
+        .featured-list ul li:last-child {
+            border-bottom: none;
+        }
+        .featured-list ul li:hover {
+            padding-left: 8px;
+            color: #e74c3c;
+        }
+        .featured-list .num {
+            background: #ffb347;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        /* ===== 亲子互动 / 游戏 ===== */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .game-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            transition: all .35s;
+        }
+        .game-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 26px rgba(0,0,0,0.1);
+        }
+        .game-emoji {
+            background: linear-gradient(135deg, #ffe0c2, #ffc9a3);
+            text-align: center;
+            padding: 28px 0;
+            font-size: 3.5rem;
+        }
+        .game-info {
+            padding: 20px;
+        }
+        .game-info h3 {
+            color: #b03a2e;
+            margin-bottom: 6px;
+            font-size: 1.2rem;
+        }
+        .game-info p {
+            color: #7f6b5f;
+            font-size: 0.95rem;
+        }
+        /* ===== 安全教育 ===== */
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .safety-item {
+            background: #fff8f0;
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            border: 2px solid #ffe3d0;
+            transition: all .3s;
+        }
+        .safety-item:hover {
+            border-color: #e74c3c;
+        }
+        .safety-item .s-icon {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+        .safety-item h3 {
+            font-size: 1.15rem;
+            color: #c0392b;
+            margin-bottom: 8px;
+        }
+        .safety-item p {
+            font-size: 0.92rem;
+            color: #6e5b4e;
+        }
+        /* ===== 周边商城 ===== */
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .shop-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+            transition: all .35s;
+            position: relative;
+        }
+        .shop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+        }
+        .shop-img {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.2rem;
+            background: linear-gradient(145deg, #fde5d3, #fad4b8);
+        }
+        .shop-body {
+            padding: 16px 18px 20px;
+        }
+        .shop-body h3 {
+            font-size: 1.05rem;
+            color: #4a3b32;
+            margin-bottom: 4px;
+        }
+        .shop-body .tag {
+            display: inline-block;
+            background: #ffb347;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .shop-body .price {
+            color: #e74c3c;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        /* ===== FAQ ===== */
+        .faq-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            border-left: 4px solid #ffb347;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            color: #b03a2e;
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            color: #6e5b4e;
+        }
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #3e2c23;
+            color: #e0d0c5;
+            padding: 40px 0 20px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand .brand-icon {
+            background: #ffb347;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .footer-brand p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            max-width: 300px;
+        }
+        .footer-links h4 {
+            color: #ffb347;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links ul li a {
+            opacity: 0.8;
+            transition: all .2s;
+        }
+        .footer-links ul li a:hover {
+            opacity: 1;
+            color: #ffb347;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .story-grid, .safety-grid, .shop-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .game-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-wrap {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .main-nav ul {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .story-grid, .safety-grid, .shop-grid, .game-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+            .section-sub {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页眉 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand" aria-label="小红帽官网首页">
+                <span class="brand-icon">🧺</span>
+                <span class="brand-name">小红帽</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">经典故事</a></li>
+                    <li><a href="#">动画剧场</a></li>
+                    <li><a href="#">亲子乐园</a></li>
+                    <li><a href="#">安全教育</a></li>
+                    <li><a href="#">周边商城</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>🧢 小红帽的童话世界</h1>
+            <p>陪伴几代人成长的经典童话IP，在这里，孩子们可以读故事、看动画、玩游戏、学安全，和勇敢善良的小红帽一起开启奇妙旅程！</p>
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary">🎬 观看动画</a>
+                <a href="#" class="btn btn-outline">📖 阅读故事</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事分类 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">探索故事森林</h2>
+            <p class="section-sub">走进小红帽的童话王国，发现更多精彩内容</p>
+            <div class="story-grid">
+                <div class="story-card">
+                    <div class="story-icon">🐺</div>
+                    <h3>经典童话</h3>
+                    <p>收录《小红帽》原版及改编故事，带领孩子感受经典魅力</p>
+                </div>
+                <div class="story-card">
+                    <div class="story-icon">🌳</div>
+                    <h3>森林冒险</h3>
+                    <p>小红帽与大灰狼的斗智斗勇，培养孩子的勇气与智慧</p>
+                </div>
+                <div class="story-card">
+                    <div class="story-icon">👵</div>
+                    <h3>亲情陪伴</h3>
+                    <p>小红帽与外婆之间的温馨故事，传递爱与孝心</p>
+                </div>
+                <div class="story-card">
+                    <div class="story-icon">🖍️</div>
+                    <h3>创意改编</h3>
+                    <p>全新视角的趣味改编，激发孩子的想象力与创造力</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门故事 + 榜单 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">本周热门</h2>
+            <p class="section-sub">孩子们最爱看的故事都在这里</p>
+            <div class="featured-wrap">
+                <article class="featured-main">
+                    <h3>📕 小红帽新传：森林守护者</h3>
+                    <p>小红帽长大后成为了森林的守护者，她用智慧与善良帮助森林里的小动物解决各种难题。这一回，大灰狼又想要捣乱了，小红帽会怎么应对呢？</p>
+                    <p>故事教会孩子：真正的勇敢不是鲁莽，而是用智慧和善意化解危机。</p>
+                    <a href="#" class="btn btn-primary" style="padding:8px 24px;font-size:0.95rem;">立即阅读 →</a>
+                </article>
+                <div class="featured-list">
+                    <h3>🔥 人气榜 TOP 5</h3>
+                    <ul>
+                        <li><span class="num">1</span>小红帽与大灰狼的终极对决</li>
+                        <li><span class="num">2</span>外婆的魔法烘焙课</li>
+                        <li><span class="num">3</span>森林里的神秘脚印</li>
+                        <li><span class="num">4</span>小红帽的勇敢之旅</li>
+                        <li><span class="num">5</span>会说话的小红帽篮子</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 亲子互动游戏 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">亲子互动乐园</h2>
+            <p class="section-sub">寓教于乐，陪伴孩子快乐成长</p>
+            <div class="game-grid">
+                <div class="game-card">
+                    <div class="game-emoji">🧩</div>
+                    <div class="game-info">
+                        <h3>小红帽拼图</h3>
+                        <p>拖动拼图块，还原小红帽的森林之旅，锻炼观察力与耐心</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-emoji">🎨</div>
+                    <div class="game-info">
+                        <h3>童话涂色本</h3>
+                        <p>为小红帽、外婆和小动物们涂上喜欢的颜色，发挥无限创意</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-emoji">🔍</div>
+                    <div class="game-info">
+                        <h3>森林找不同</h3>
+                        <p>两幅看似一样的图画，找出隐藏的不同点，提升专注力</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 安全教育内容 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">小红帽安全课堂</h2>
+            <p class="section-sub">像小红帽一样学会保护自己</p>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <div class="s-icon">🚸</div>
+                    <h3>不跟陌生人走</h3>
+                    <p>教会孩子识别潜在危险，学会拒绝陌生人的邀请</p>
+                </div>
+                <div class="safety-item">
+                    <div class="s-icon">🏠</div>
+                    <h3>居家安全</h3>
+                    <p>独自在家时的注意事项，防火防电防陌生人敲门</p>
+                </div>
+                <div class="safety-item">
+                    <div class="s-icon">🌲</div>
+                    <h3>户外安全</h3>
+                    <p>在森林、公园等户外场所如何确保自身安全</p>
+                </div>
+                <div class="safety-item">
+                    <div class="s-icon">🆘</div>
+                    <h3>紧急求助</h3>
+                    <p>记住紧急电话，学习在危险时刻如何向大人求助</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 周边商城 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">小红帽周边商城</h2>
+            <p class="section-sub">把童话带回家，让小红帽陪伴每一天</p>
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <div class="shop-img">🧸</div>
+                    <div class="shop-body">
+                        <span class="tag">新品</span>
+                        <h3>小红帽毛绒玩偶</h3>
+                        <span class="price">¥129</span>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="shop-img">📚</div>
+                    <div class="shop-body">
+                        <span class="tag">经典</span>
+                        <h3>精装绘本套装</h3>
+                        <span class="price">¥89</span>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="shop-img">🎒</div>
+                    <div class="shop-body">
+                        <span class="tag">热卖</span>
+                        <h3>小红帽儿童书包</h3>
+                        <span class="price">¥159</span>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="shop-img">🧢</div>
+                    <div class="shop-body">
+                        <span class="tag">限量</span>
+                        <h3>联名棒球帽</h3>
+                        <span class="price">¥99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 常见问题 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">家长常见问题</h2>
+            <p class="section-sub">关于小红帽官网，您想了解的都在这里</p>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <h3>❓ 小红帽故事适合什么年龄段的孩子阅读？</h3>
+                    <p>经典的小红帽故事适合3-10岁的儿童。对于低龄孩子，家长可以伴读并进行安全引导；对于大一些的孩子，可以鼓励他们独立阅读并思考故事背后的寓意。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 网站内容是否全部免费？</h3>
+                    <p>网站上的故事阅读、部分动画内容及亲子游戏资源均免费开放，周边商城中的实物商品需另行购买。我们也会不定期推出会员专属的精品内容。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 如何保障孩子的上网安全？</h3>
+                    <p>小红帽官网所有内容均经过严格筛选，适合儿童观看。同时我们建议家长开启青少年模式，陪伴孩子共同浏览，享受温馨的亲子时光。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 是否有小红帽的线下活动？</h3>
+                    <p>我们会不定期在全国多个城市举办小红帽主题的亲子阅读会、舞台剧演出等活动。最新活动信息会在官网首页及公告栏中及时发布，敬请关注。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-icon">🧺</span>
+                    <p>小红帽官网——守护每一个孩子的童话梦。让经典故事陪伴成长，用爱与智慧点亮童年。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">经典故事</a></li>
+                        <li><a href="#">动画剧场</a></li>
+                        <li><a href="#">亲子乐园</a></li>
+                        <li><a href="#">安全教育</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>了解我们</h4>
+                    <ul>
+                        <li><a href="#">关于小红帽</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 小红帽官网 | 本页面为演示性内容，非实际商业网站
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+      </html>
