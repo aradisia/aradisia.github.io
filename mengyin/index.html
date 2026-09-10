@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙阴蒙山-沂蒙福地·生态旅游与人文胜境全指南</title>
+    <meta name="description" content="蒙阴蒙山旅游攻略：景区导览、自然风光、登山路线、地方特产、人文历史与实用问答。深度了解蒙山国家森林公园、云蒙景区、孟良崮及周边游。" >
+    <meta name="keywords" content="蒙阴蒙山,蒙山旅游,蒙阴旅游,沂蒙山,云蒙景区,蒙山国家森林公园,蒙阴特产,蒙山登山路线">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            background-color: #f5f7f2;
+            color: #1f2a1e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页眉 */
+        .site-header {
+            background: #1e3b2c;
+            background-image: linear-gradient(120deg, #163524, #2b5a3a);
+            padding: 16px 0;
+            border-bottom: 4px solid #e4b95b;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-icon {
+            background: #e4b95b;
+            width: 42px;
+            height: 42px;
+            border-radius: 50% 50% 20% 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #1f3d2b;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f2f7ed;
+            letter-spacing: 2px;
+        }
+        .brand-name small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #cddcc5;
+            display: block;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #e9f2e0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #e4b95b;
+            color: #fff;
+        }
+        /* 主视觉 */
+        .hero {
+            background: linear-gradient(105deg, #264d33 0%, #3e6b4a 80%), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMzAgMTBsMTUgMjBMMjAgNDB6TTcwIDIwbDE1IDEwLTE1IDV6IiBmaWxsPSIjZmZmZmZmMjAiLz48L3N2Zz4=');
+            background-blend-mode: overlay;
+            padding: 60px 0 50px;
+            color: white;
+            border-bottom: 6px solid #d8b45a;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .hero-tags span {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            border: 1px solid rgba(255,215,130,0.4);
+        }
+        /* 信息卡片区域 */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            padding-left: 12px;
+            border-left: 8px solid #b68b3c;
+            color: #1c3a28;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 20px 0 30px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px 20px;
+            box-shadow: 0 8px 18px rgba(0, 30, 10, 0.08);
+            transition: 0.2s ease;
+            border: 1px solid #dbe8d4;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 30px rgba(35, 70, 40, 0.12);
+            border-color: #b29b4b;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #29583b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feature-card p {
+            color: #2e3b2c;
+        }
+        .card-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-weight: 600;
+            color: #8a6e2f;
+            text-decoration: none;
+            border-bottom: 2px solid #c8a85e;
+        }
+        .card-link:hover {
+            color: #4f3e0e;
+        }
+        /* 双列布局 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .info-panel {
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            border-radius: 28px;
+            padding: 26px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #cbdcc2;
+        }
+        .info-panel h2 {
+            font-size: 1.8rem;
+            color: #1f452a;
+            margin-bottom: 18px;
+            border-bottom: 2px dashed #aec59e;
+            padding-bottom: 8px;
+        }
+        .route-list {
+            list-style: none;
+        }
+        .route-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #cddebf;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+        .route-list li::before {
+            content: "⛰️";
+            margin-right: 8px;
+            color: #5c7c3a;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0;
+        }
+        .product-tag {
+            background: #e2edda;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #1b4127;
+            font-weight: 500;
+        }
+        /* 人文板块 */
+        .culture-area {
+            background: #e4ebdd;
+            border-radius: 40px;
+            padding: 30px 28px;
+            margin: 30px 0;
+        }
+        .culture-area blockquote {
+            font-size: 1.15rem;
+            font-style: italic;
+            background: #ffffffaa;
+            padding: 18px 24px;
+            border-radius: 60px 20px 60px 20px;
+            border-left: 6px solid #9e7f3f;
+        }
+        /* 常见问题 */
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .faq-item h3 {
+            color: #1e4a2c;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #1a2c1e;
+            color: #c0d2b8;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 5px solid #b6924b;
+        }
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-col p {
+            margin-bottom: 8px;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #3b5940;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 800px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .brand-name {
+                font-size: 1.6rem;
+            }
+        }
+        @media (max-width: 500px) {
+            .hero {
+                padding: 30px 0;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .container {
+                padding: 0 14px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-icon">蒙</div>
+                <div class="brand-name">蒙阴蒙山
+                    <small>沂蒙福地 · 生态人文</small>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#scenic">景区导览</a></li>
+                    <li><a href="#routes">路线推荐</a></li>
+                    <li><a href="#special">风物特产</a></li>
+                    <li><a href="#culture">人文史记</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏主视觉 -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>蒙阴蒙山</h1>
+                <p>登临沂蒙最高峰，漫步森林氧吧，探寻红色热土与千年文脉。这里是蒙山国家森林公园、云蒙景区所在地，自然与人文交织的康养胜地。</p>
+                <div class="hero-tags">
+                    <span>🌲 国家森林公园</span>
+                    <span>⛰️ 云蒙峰海拔1156m</span>
+                    <span>🍃 负氧离子充沛</span>
+                    <span>📜 红色沂蒙精神</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 核心亮点卡片 -->
+            <h2 class="section-title">初识蒙山 · 四大不可错过</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>🌿 云蒙景区</h3>
+                    <p>集山岳、森林、瀑布于一身，以“天然氧吧”著称。漫步林间步道，观赏中国瀑布、大小云蒙峰，夏季平均气温24℃。</p>
+                    <a href="#scenic" class="card-link">查看游览详情 →</a>
+                </article>
+                <article class="feature-card">
+                    <h3>🏞️ 蒙山国家森林公园</h3>
+                    <p>横跨蒙阴、平邑等县，森林覆盖率高达98%，拥有多种珍稀动植物。是户外徒步、科普研学、生态摄影的绝佳去处。</p>
+                    <a href="#routes" class="card-link">推荐徒步路线 →</a>
+                </article>
+                <article class="feature-card">
+                    <h3>🍑 蒙阴蜜桃与风物</h3>
+                    <p>蒙阴县是中国蜜桃之乡，蒙山脚下果香四溢。此外还有蒙山全蝎、光棍鸡、沂蒙煎饼等特色美食，值得品尝。</p>
+                    <a href="#special" class="card-link">了解地道特产 →</a>
+                </article>
+                <article class="feature-card">
+                    <h3>📖 沂蒙精神与古迹</h3>
+                    <p>蒙山地区是沂蒙革命根据地重要组成部分，孟良崮战役遗址就在蒙阴境内。山间古刹、摩崖石刻承载千年记忆。</p>
+                    <a href="#culture" class="card-link">阅读人文故事 →</a>
+                </article>
+            </div>
+
+            <!-- 双栏信息：导览与实用资讯 -->
+            <div class="two-col">
+                <section id="scenic" class="info-panel">
+                    <h2>🏔️ 核心景区导览</h2>
+                    <p><strong>云蒙景区（蒙阴蒙山主景区）</strong> 位于蒙阴县南部，登山索道与步道并行。主要景点包括：</p>
+                    <ul style="margin: 15px 0 10px 20px; color: #243d1a;">
+                        <li>大小云蒙峰 — 蒙山最高峰，可远眺沂蒙群崮</li>
+                        <li>中国瀑布 — 落差达60余米，雨季尤为壮观</li>
+                        <li>雨王庙、翠云观 — 千年道教遗址</li>
+                        <li>森林冲锋车、漂流等体验项目（季节性）</li>
+                    </ul>
+                    <p>建议游玩时长：4-6小时。可选择观光车上山，步行下山，体能较好者可挑战全程徒步。</p>
+                </section>
+
+                <section id="routes" class="info-panel">
+                    <h2>🧗 经典路线建议</h2>
+                    <ul class="route-list">
+                        <li><strong>休闲路线：</strong> 景区大门 → 观光车至雨王庙 → 步行至大小云蒙峰 → 索道下山</li>
+                        <li><strong>徒步挑战：</strong> 蒙山步道起点 → 十八盘 → 中国瀑布 → 云蒙峰顶（约4-5小时）</li>
+                        <li><strong>人文寻访：</strong> 蒙阴县 → 孟良崮纪念馆 → 蒙山红色遗址 → 古刹寻踪</li>
+                    </ul>
+                    <p style="margin-top: 10px;">📌 登山前请关注天气，部分路段冬季结冰，建议穿着防滑登山鞋。</p>
+                </section>
+            </div>
+
+            <!-- 特产风物 + 文化 -->
+            <section id="special" class="culture-area" style="background: #dce5d3;">
+                <h2 style="color: #1d3a1f; font-size: 1.9rem;">🍑 蒙阴风物 · 山野之味</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                    <div style="flex:1; min-width: 240px;">
+                        <p>蒙阴蜜桃是国家地理标志产品，色泽艳丽、果肉细腻。每年6-10月均有不同品种上市。此外，蒙山板栗、核桃、蜂产品也颇受欢迎。</p>
+                        <div class="product-list">
+                            <span class="product-tag">蒙阴蜜桃</span>
+                            <span class="product-tag">蒙山全蝎</span>
+                            <span class="product-tag">光棍鸡</span>
+                            <span class="product-tag">沂蒙煎饼</span>
+                            <span class="product-tag">蒙山绿茶</span>
+                        </div>
+                    </div>
+                    <blockquote style="flex:1; min-width: 220px;">
+                        “人人都说沂蒙山好，沂蒙山上好风光。” 蒙山不仅风景秀丽，更孕育了质朴丰饶的物产。
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- 人文历史板块 -->
+            <section id="culture" class="info-panel" style="background: #f2f4ec;">
+                <h2>📜 蒙山人文 · 千年回响</h2>
+                <p>蒙山古称“东蒙”、“东山”，《诗经》中就有“奄有龟蒙”之句。孔子曾登东山而小鲁，登泰山而小天下。山中现存众多寺庙、碑刻，承载着厚重的文化记忆。</p>
+                <p>近代，蒙阴是沂蒙革命根据地的核心区域，发生了举世闻名的孟良崮战役。蒙山脚下，红色故事代代流传，沂蒙精神激励后人。</p>
+                <p style="margin-top: 12px;"><strong>推荐人文体验：</strong> 蒙山鬼谷子文化、颛臾国故城遗址、孟良崮战役纪念馆、蒙山老区民俗村。</p>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" style="margin: 40px 0;">
+                <h2 class="section-title">❓ 蒙山·常见问答</h2>
+                <div class="faq-item">
+                    <h3>蒙阴蒙山和沂蒙山是什么关系？</h3>
+                    <p>沂蒙山是沂山与蒙山的合称，蒙山是沂蒙山旅游区的核心部分。蒙阴县境内的蒙山云蒙景区是主要游览区域，通常说的“蒙阴蒙山”即指这一带。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>什么季节去蒙山最合适？</h3>
+                    <p>四季皆宜。春夏满目苍翠、瀑布水量大；秋季层林尽染、果实成熟；冬季雪后山景如画，但需注意道路结冰。每年4-10月为旺季。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>从蒙阴县城怎么去蒙山景区？</h3>
+                    <p>蒙阴汽车站有直达云蒙景区的旅游专线巴士，或乘出租车约30分钟。自驾可走京沪高速蒙阴出口，沿蒙山路行驶约20公里。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>蒙山登山难度大吗？适合老人孩子吗？</h3>
+                    <p>景区设施完善，可乘坐观光车和索道，休闲路线轻松。但若全程徒步登山，部分阶梯较陡，建议量力而行，备足饮水。</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h3 style="color: #d4c184;">蒙阴蒙山·旅行备忘</h3>
+                <p>地址：山东省临沂市蒙阴县</p>
+                <p>景区服务电话：请查询当地最新资讯</p>
+                <p>建议游玩时间：1-2天</p>
+            </div>
+            <div class="footer-col">
+                <h3 style="color: #d4c184;">周边联动</h3>
+                <p>孟良崮 · 沂蒙山世界地质公园</p>
+                <p>岱崮地貌 · 地下银河</p>
+                <p>沂蒙红色影视基地</p>
+            </div>
+            <div class="footer-col">
+                <h3 style="color: #d4c184;">出行提示</h3>
+                <p>山区温差较大，备好外套</p>
+                <p>保护环境，勿随意丢弃垃圾</p>
+                <p>节假日提前预约门票</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 蒙阴蒙山 · 自然与人文之旅   | 本页面信息仅供出行参考，详情以官方发布为准</p>
+        </div>
+    </footer>
+</body>
+</html>
